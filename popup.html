@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Custom URL Bar Settings</title>
+  <style>
+    body {
+      text-align: center;
+      font-family: Arial, sans-serif;
+      padding: 10px;
+      background-color: hsl(225, 5%, 17%);
+      color: #bdbfbd;
+      margin: 0;
+      width: 90vw;
+      max-width: 600px;
+    }
+
+    .option {
+      font-size: 1rem;
+      margin-bottom: 15px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    #theme-header {
+      padding: 5px;
+      margin-bottom: 10px;
+    }
+
+    #theme {
+      text-align: center;
+      background-color: #292a2d;
+      color: #bdbfbd;
+      border-radius: 5px;
+      width: 50vw;
+    }
+
+    select,
+    input[type="range"] {
+      width: 80%;
+      padding: 5px;
+      box-sizing: border-box;
+      margin-bottom: 5px;
+    }
+
+    .font-size-display {
+      text-align: center;
+      margin-top: 8px;
+      font-size: 16px;
+      color: #bdbfbd;
+    }
+
+    .button-container {
+      display: flex;
+      justify-content: center;
+    }
+
+    button {
+      background-color: #292a2d;
+      color: #a7c6f9;
+      border: 0.063rem solid #096d9d;
+      border-radius: 30px;
+      padding: 9px;
+      text-align: center;
+      text-decoration: none;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+      width: 80%;
+      box-sizing: border-box;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="option">
+    <label id="theme-header" for="theme">Theme:</label>
+    <select id="theme">
+      <option value="dark">Dark</option>
+      <option value="light">Light</option>
+    </select>
+  </div>
+  <div class="option">
+    <label for="fontSize">Font Size:</label>
+    <input type="range" id="fontSize" min="8" max="22" value="16">
+    <div class="font-size-display" id="fontSizeDisplay">16px</div>
+  </div>
+  <div class="button-container">
+    <button id="saveSettings">Save</button>
+  </div>
+  <script src="popup.js"></script>
+</body>
+
+</html>
